@@ -26,13 +26,14 @@ repositories {
 }
 
 dependencies {
-	implementation platform('org.springframework.cloud:spring-cloud-dependencies:2021.0.5')
-	implementation platform('io.awspring.cloud:spring-cloud-aws-dependencies:2.4.2')
+	implementation platform('software.amazon.awssdk:bom:2.20.56')
+
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
 	implementation 'org.jetbrains.kotlin:kotlin-reflect'
-	implementation 'com.amazonaws:aws-java-sdk-dynamodb'
+	implementation 'software.amazon.awssdk:dynamodb'
+	implementation("software.amazon.awssdk:dynamodb-enhanced")
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
